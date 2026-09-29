@@ -22,7 +22,8 @@ function body(req) {
 }
 function metrics() {
   const count = status => leads.filter(x => x.status === status).length;
-  return { total: leads.length, a: leads.filter(x => x.tier === 'A').length, contacted: count('contacted') + count('replied') + count('qualified') + count('onboarded'), replied: count('replied') + count('qualified') + count('onboarded'), qualified: count('qualified') + count('onboarded'), onboarded: count('onboarded') };
+  const reached = (field, later) => leads.filter(x => x[field] || later.includes(x.status)).length;
+  return { total: leads.length, a: leads.filter(x => x.tier === 'A').length, contacted: reached('contacted_at', ['contacted', 'replied', 'qualified', 'onboarded']), replied: reached('replied_at', ['replied', 'qualified', 'onboarded']), qualified: reached('qualified_at', ['qualified', 'onboarded']), onboarded: count('onboarded') };
 }
 
 const server = http.createServer(async (req, res) => {
@@ -41,7 +42,11 @@ const server = http.createServer(async (req, res) => {
       if (req.method === 'POST' && match[2] === 'status') {
         const { status } = JSON.parse(await body(req));
         if (!statuses.has(status)) return send(res, 400, { error: 'Invalid status' });
-        lead.status = status; lead.updated_at = new Date().toISOString(); save();
+        lead.status = status; lead.updated_at = new Date().toISOString();
+        if (['contacted', 'replied', 'qualified', 'onboarded'].includes(status)) lead.contacted_at ||= lead.updated_at;
+        if (['replied', 'qualified', 'onboarded'].includes(status)) lead.replied_at ||= lead.updated_at;
+        if (['qualified', 'onboarded'].includes(status)) lead.qualified_at ||= lead.updated_at;
+        save();
         return send(res, 200, { lead, metrics: metrics() });
       }
     }
