@@ -1,0 +1,7 @@
+name,contact,country,platforms,us_clients,portfolio_url,english,availability,source,notes
+Maria Santos,https://example.com/maria,Philippines,"Instagram,TikTok",yes,https://example.com/maria/portfolio,yes,yes,Upwork,"Creator content calendar and community moderation"
+Ada Okafor,ada@example.com,Nigeria,"TikTok,Instagram",yes,https://example.com/ada,yes,yes,Referral,"US creator fan community operations"
+Joseph Cruz,joseph@example.com,Philippines,Facebook,no,,yes,yes,OnlineJobs.ph,"Small business social media"
+Maria duplicate,https://example.com/maria,Philippines,Instagram,yes,,yes,yes,Manual,"Intentional duplicate for demo"
+Liam Reed,liam@example.com,United Kingdom,YouTube,yes,https://example.com/liam,yes,no,LinkedIn,"EU and US creator growth"
+Chioma Eze,chioma@example.com,Nigeria,"Instagram,Reddit",yes,https://example.com/chioma,yes,yes,Community,"Subscription and fan relationship experience"
