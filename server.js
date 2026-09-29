@@ -51,6 +51,7 @@ const server = http.createServer(async (req, res) => {
       }
     }
     if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '/index.html')) return send(res, 200, fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8'), 'text/html; charset=utf-8');
+    if (req.method === 'GET' && url.pathname === '/styles.css') return send(res, 200, fs.readFileSync(path.join(__dirname, 'styles.css'), 'utf8'), 'text/css; charset=utf-8');
     return send(res, 404, { error: 'Not found' });
   } catch (error) { send(res, 400, { error: error.message }); }
 });
