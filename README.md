@@ -1,8 +1,8 @@
 # Onely Operator Pipeline：3 天 100 名美国社媒运营人员入驻实验
 
 代码仓库：<https://github.com/yihanx082-cmd/onely-operator-pipeline-2026>  
-4 分 24 秒中文语音演示视频（含鼠标指针与点击光圈）：<https://github.com/yihanx082-cmd/onely-operator-pipeline-2026/blob/main/demo/onely-operator-demo.mp4>  
-若 GitHub 页面静音，可用[直接下载 MP4](https://raw.githubusercontent.com/yihanx082-cmd/onely-operator-pipeline-2026/main/demo/onely-operator-demo.mp4)播放。
+4 分 24 秒中文语音演示视频（含鼠标指针与点击光圈）：<https://github.com/yihanx082-cmd/onely-operator-pipeline-2026/blob/main/demo/onely-operator-demo-clicks-voice.mp4>  
+若 GitHub 页面静音，可用[直接下载 MP4](https://raw.githubusercontent.com/yihanx082-cmd/onely-operator-pipeline-2026/main/demo/onely-operator-demo-clicks-voice.mp4)播放。
 
 > 提交时间：2026-09-30 之前。这里的“100 人”是**目标，不是已完成业绩**。原型使用虚构样本，不包含真实候选人、Onely 账号或批量发送接口。
 
